@@ -1,35 +1,21 @@
 <html>
 <head>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset=utf-8 />
+<title>A simple map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
 </head>
 <body>
-	
-  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-<div class="row">
-  <div class="col-md-10 col-xs-8">
-<h1>Cats</h1>
-  <p class="one">The Musical</p>
- <p>
- 	Cats is a musical composed by Andrew Lloyd Webber, based on Old Possum's Book of Practical Cats by T. S. Eliot, and produced by Cameron Mackintosh. The musical tells the story of a tribe of cats called the Jellicles and the night they make what is known as "the Jellicle choice" and decide which cat will ascend to the Heaviside Layer and come back to a new life. Cats introduced the song standard "Memory". The first performance of "Cats" was in 1981.
- </p>
-
- <img src= "http://dreamatico.com/data_images/cat/cat-6.jpg" style="width:100%">
-</div>
-
-<div class="row">
-
-  <div class="col-md-2 col-xs-1">
-  	<h2>
-  		Check these out!
-  	</h2>
-  	<img src= "https://media.giphy.com/media/UohqyZa50MF2/giphy.gif">
-  	<img src= "https://media.giphy.com/media/UdTleATFKqCrK/giphy.gif">
-  	<img src= "https://media.giphy.com/media/10yP4V5OXuFFSg/giphy.gif">
-</div>
-
-
-
+<div id='map'></div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhcmVlZmFza2FyIiwiYSI6ImNpZnplaWY3ODAya2d0MG03bG1ncTgwYmIifQ.NXKLDhKbhhbdqyBJKDmpQw';
+var map = L.mapbox.map('map', 'shareefaskar.nok516ac')
+    .setView([40, -74.50], 9);
+</script>
 </body>
 </html>
